@@ -1,0 +1,22 @@
+h1 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+.navbar-brand {
+    font-family: 'Roboto', sans-serif;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 10px;
+    margin: 5px;
+}
+
+.stable-scroll {
+    overflow-y: auto;
+    height: 100vh;
+}

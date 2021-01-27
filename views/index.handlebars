@@ -1,0 +1,57 @@
+<div id="head-navbar">
+    <header>
+        <h1>BURGERS</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand"><i class="fas fa-hamburger"></i></a>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav w-100 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><i class="fas fa-hamburger"></i></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav w-100 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><i class="fas fa-hamburger"></i></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav w-100 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><i class="fas fa-hamburger"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex">
+                    <input type="search" class="form-control me-2" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Add a Burger</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+</div>
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h2 class="list-title">Not eaten: </h2>
+                <ul class="list-content" id="not-d-list">
+                    {{#each burgers}}
+                        {{#unless devoured}}
+                            {{> burgers/burger-block devour=true}}
+                        {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="col">
+                <h2 class="list-title ">Devoured:</h2>
+                <ul class="list-content" id="d-list">
+                    {{#each burgers}}
+                        {{#if devoured}}
+                            {{> burgers/burger-block devour=false}}
+                        {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
