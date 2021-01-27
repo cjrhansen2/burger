@@ -18,7 +18,7 @@ router.get("/", (req,res) => {
 });
 
 //define how the route puts
-router.put("/api/burger/:id", (req,res) => {
+router.put("/api/burgers/:id", (req,res) => {
     var burgerID = req.params.id;
     burger.updateOne(burgerID, resBurger => {
         //throw a 404 error if the burgerID is not there
@@ -33,7 +33,7 @@ router.put("/api/burger/:id", (req,res) => {
 });
 
 //aaand define the post route
-router.post('/api/burger', (req,res) => {
+router.post('/api/burgers', (req,res) => {
     burger.insertOne('burger_name', req.body.burger_name, burgerRes => {
         res.json({id: burgerRes.insertId});
     });
