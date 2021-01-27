@@ -9,6 +9,8 @@ Go to the link where the app is running live, hosted by Heroku. Can be found her
 
 ## Usage
 
+App is intended to have two columns: a list of burgers yet to be devoured, and a list of burgers that have been devoured. The two columns are drawn from a SQL database of burgers. Users can add burgers to this database and remove them by devouring.
+
 ![](burgerapp.png)
 
 
