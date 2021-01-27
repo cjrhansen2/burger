@@ -22,6 +22,7 @@
                     </ul>
                 </div>
                 <form class="d-flex">
+                    <input type="search" class="form-control me-2" placeholder="Add a burger" aria-label="Search">
                     <button id="addburger" class="btn btn-outline-success" type="submit">Add a Burger</button>
                     <button id="devourburger" class="btn btn-outline-success" type="submit">Devour a Burger</button>
                 </form>
@@ -33,6 +34,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
+                <div class="notdevoured-list list-box">
                 <h2 class="list-title">Not eaten: </h2>
                 <ul class="list-content" id="not-d-list">
                     {{#each burgers}}
@@ -41,8 +43,10 @@
                         {{/unless}}
                     {{/each}}
                 </ul>
+                </div>
             </div>
             <div class="col">
+                <div class="isdevoured-list list-box">
                 <h2 class="list-title ">Devoured:</h2>
                 <ul class="list-content" id="d-list">
                     {{#each burgers}}
@@ -51,6 +55,7 @@
                         {{/if}}
                     {{/each}}
                 </ul>
+                </div>
             </div>
         </div>
     </div>
