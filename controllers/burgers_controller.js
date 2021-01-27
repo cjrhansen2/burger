@@ -1,7 +1,7 @@
 //require all the necessary files such as burger model and express
 //then create the different routes
 
-var burger = require('../models/burger.js');
+var burger = require('../models/burger');
 const express = require("express");
 var router = express.Router();
 

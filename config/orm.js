@@ -1,5 +1,5 @@
 //require the connection.js file
-var connection = require("connection.js");
+var connection = require("./connection");
 
 //make the orm
 var orm = {
