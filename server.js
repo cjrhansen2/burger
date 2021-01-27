@@ -1,3 +1,4 @@
+//set up the server using express.js
 var express = require('express');
 var PORT = process.env.PORT || 3306;
 var app = express();
@@ -12,13 +13,11 @@ app.use("/public", express.static("./public"));
 
 // set up Handlebars
 var expressHandlebars = require("express-handlebars");
-
 app.engine("handlebars", expressHandlebars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// import routes and give the server access to them.
+// import routes and give the server access to them
 var routes = require("./controllers/burgers_controller");
-
 app.use(routes);
 
 // make the server start to listen
