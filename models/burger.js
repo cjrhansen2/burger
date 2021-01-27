@@ -5,19 +5,19 @@ const orm = require('../config/orm.js');
 const burger = {
     //first define selactAll
     selectAll: function(cb) {
-        orm.selectAll("burger", function(res) {
+        orm.selectAll("burgers", function(res) {
             cb(res);
         });
     },
     //then define insertOne
     insertOne: function(column, value, cb) {
-        orm.insertOne("burger", column, value, function(res) {
+        orm.insertOne("burgers", column, value, function(res) {
             cb(res);
         });
     },
     //aaaaaand define updateOne
     updateOne: function (burgerID, cb) {
-        orm.updateOne("burger", "devoured", burgerID, function (res) {
+        orm.updateOne("burgers", "devoured", burgerID, function (res) {
             cb(res);
         });
     }
